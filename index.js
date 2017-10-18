@@ -1,12 +1,16 @@
 var express = require('express')
-var app = express()
 var request = require('request')
 var mongo = require('mongodb').MongoClient
+
+var app = express()
 var api_key = 'AIzaSyArCjETUEFzZ7NbRdzA84VaQYFvbm-_ZGw'
 var search_id = '014889246654064834622:p2ic55-hajy'
 var url = 'https://www.googleapis.com/customsearch/v1?key='+api_key+'&cx='+search_id+'&searchType=image'+'&q='
+
 const port = process.env.PORT || 4000;
-const db_url = 'mongodb://localhost:27017/image-search'
+const mongo_uri = 'mongodb://heroku_pmbm47ls:24vi1c255sk8lu53tnc6i2a296@ds123725.mlab.com:23725/heroku_pmbm47ls'
+const local_db = 'mongodb://localhost:27017/image-search'
+const db_url = mongo_uri || local_db
 
 console.log('App running on '+port)
 
