@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Image Search Abstraction Layer</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+	<!-- Bootstrap-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<!-- CSS Stylesheet -->
+	<link rel="stylesheet" href="stylesheet.css" type="text/css">
+
+	<!--Font Awesome-->
+	<script src="https://use.fontawesome.com/9ab0b6d75e.js"></script>
+
+	<link rel="shortcut icon" href="">
+
+</head>
+<body>
+<div class="container">
+	<div class="title"><h1>Image Search Abstraction Layer</h1></div>
+	<div class="instructions">
+		<p>This app lets you search for images on the Google Custom Search API and returns the images' link, a description of them, and the URL of their webpage.</p>
+		<p>Just type in /search/[SEARCH TERM] at the end of this page's URL. You can use the 'offset' parameter to determine which set of results is displayed<p>
+	<h4>Example</h4>
+		<p>Input: 'https://image-search.herokuapp.com/search/cats?offset=3'</p>
+	<p>Output: A list of the images displayed on page 3 of the search results for 'cats'.</p>
+	<h4>Past Searches</h4>
+	<p>You can see the last searches, starting from the latest, if you go to <a href="https://image-search-sebgrebe.herokuapp.com/latest">https://image-search-sebgrebe.herokuapp.com/latest</a>.
+	</div>
+<footer>
+       <div class="col-md-6">Created by <a href="https://sebgrebe.github.io/">sebgrebe</a> with <a href="https://nodejs.org/en/"><img src="/img/nodejs_logo.png" height="25px" /></a> + <a href="https://www.mongodb.com/"><img src="/img/mongodb.jpg" height="25px" style="margin-bottom: 6px" />
+       </div>
+       <div class="col-md-6">
+              Source code on <a href="https://github.com/sebgrebe/image-search" class="logo_link" target="_blank"><i class="fa fa-github" style="font-size: 150%" aria-hidden="true"></i></a>
+       </div>
+</footer>
+</div>
+</body>
+</html>
