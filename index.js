@@ -1,16 +1,21 @@
+require('dotenv').config()
 var express = require('express')
 var request = require('request')
 var mongo = require('mongodb').MongoClient
 
 var app = express()
-var api_key = 'AIzaSyArCjETUEFzZ7NbRdzA84VaQYFvbm-_ZGw'
+var api_key = process.env.GOOGLE_API_KEY
 var search_id = '014889246654064834622:p2ic55-hajy'
 var url = 'https://www.googleapis.com/customsearch/v1?key='+api_key+'&cx='+search_id+'&searchType=image'+'&q='
 
 const port = process.env.PORT || 4000;
-const mongo_uri = 'mongodb://heroku_pmbm47ls:24vi1c255sk8lu53tnc6i2a296@ds123725.mlab.com:23725/heroku_pmbm47ls'
-const local_db = 'mongodb://localhost:27017/image-search'
-const db_url = mongo_uri || local_db
+var db_url
+if (process.env.NODE_ENV === "production") {
+	db_url = process.env.MONGODB_URI
+}
+else {
+	db_url = process.env.MONGODB_LOCAL
+}
 
 console.log('App running on '+port)
 
